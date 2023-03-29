@@ -78,16 +78,4 @@ class LinearRegression:
          )[0]
         
         return self.cost_function(data_processed,labels)
-    def predict(self,data):
-        """
-                    用训练的参数模型，与预测得到回归值结果
-        """
-        data_processed = prepare_for_training(data,
-         self.polynomial_degree,
-         self.sinusoid_degree,
-         self.normalize_data
-         )[0]
-         
-        predictions = LinearRegression.hypothesis(data_processed,self.theta)
-        
-        return predictions
+
